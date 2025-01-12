@@ -1,28 +1,71 @@
-# NewProject
+# User Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+## Overview and Introduction  
+This is a web application for managing user data, built using **Angular**. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on user data. 
 
-## Development server
+### Features
+- View a list of all users.
+- Add a new user.
+- Edit the details of an existing user.
+- Delete a user.
+- Validations to ensure data accuracy.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Tech Stack
+- **Frontend**: Angular
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ ## Interfaces
 
-## Build
+ - **HomePage**:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ![Alt Text](https://github.com/amankr2076/User-Management-App/blob/main/images/Users.png)
+   ![Alt Text](https://github.com/amankr2076/User-Management-App/blob/main/images/Adding-User.png)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## API Endpoints
+  Here are the assumed API endpoints used in the project:
+  - ```GET /person``` - Fetch all users.
+  - ```GET /person/:id``` - Fetch a single user by ID.
+  - ```POST /person``` - Add a new user.
+  - ```PUT /person/:id``` - Update an existing user.
+  - ```DELETE /person/:id``` - Delete a user.
 
-## Running end-to-end tests
+    **Update these endpoints based on your actual backend setup.**
+    
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## Installation Steps 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# User-Management-System" 
+### Prerequisites
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Angular CLI](https://angular.io/cli)
+- Package manager (npm or yarn)
+
+### Installation
+
+- **Clone the repository**:
+   ```bash
+   git clone https://github.com/amankr2076/User-Management-App.git
+   ```
+- **Install all dependencies**  
+   ```bash  
+   npm install
+   ```
+- **To run the server**
+  ```bash
+   npm run dev
+  ```
+- **To run the client**
+  ```bash
+  npm start
+  ```
+- **Access the Application**
+    ```bash
+    http://localhost:3000
+    ```
+  
+
