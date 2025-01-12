@@ -1,0 +1,46 @@
+<div class="flex justify-center">
+    <div class='w-[1200px] rounded-lg shadow-lg py-10 px-8 bg-white mt-10'>
+        <div class="flex justify-between">
+            <h2 class='font-bold mb-4'>All Persons</h2>
+            <button
+                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                routerLink="/users/add"
+                >
+                <i class="fa-solid fa-user-plus pr-2"></i>
+                Add User
+            </button>
+        </div>
+
+        <div class="grid grid-cols-6 font-semibold border-b-2 pb-2 mt-6">
+            <div class="col-span-1 ml-[10px]">First Name</div>
+            <div class="col-span-1 ml-[-10px]">Last Name</div>
+            <div class="col-span-1 ml-2">Gender</div>
+            <div class="col-span-1 ml-2">Age</div>
+            <div class="col-span-1 ml-1">Mobile No</div>
+            <div class="col-span-1 ml-1"></div>
+          </div>
+
+          @for (user of users; track $index){
+            <div class="grid grid-cols-6 gap-4 py-2 border-b hover: hover:bg-gray-100 transition duration-200 p-2 rounded">
+                <div class="col-span-1">{{user.firstName}}</div>
+                <div class="col-span-1">{{user.lastName}}</div>
+                <div class="col-span-1">{{user.gender}}</div>
+                <div class="col-span-1">{{user.age}}</div>
+                <div class="col-span-1">{{user.mob_num}}</div>
+                <div class="flex gap-8">
+                    <button
+                        [routerLink]="'/users/'+user._id"
+                        >
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    <button
+                    (click)="delete(user._id!)"
+                        >
+                        <i class="fa-solid fa-trash text-red-600"></i>
+                    </button>
+                </div>
+              </div>
+          }
+
+    </div>
+</div>
